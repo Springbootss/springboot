@@ -12,16 +12,11 @@ public class LoginController {
 		
 		
 		return "home";
-		
-	
 	}
 	
 	@RequestMapping("/login")
 	public String login(Model model) {
 		model.addAttribute("name", "tam");
-		
-		
-		
 		
 		return "login";
 	}
