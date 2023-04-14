@@ -11,12 +11,17 @@ public class LoginController {
 	public String home() {
 		
 		
+		
+		
+		
 		return "home";
 	}
 	
 	@RequestMapping("/login")
 	public String login(Model model) {
 		model.addAttribute("name", "tam");
+		
+		
 		
 		return "login";
 	}
