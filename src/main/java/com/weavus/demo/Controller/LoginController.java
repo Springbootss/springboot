@@ -17,7 +17,7 @@ public class LoginController {
 		return "home";
 	}
 	
-	@RequestMapping("/login")
+	@RequestMapping("login")
 	public String login(Model model) {
 		model.addAttribute("name", "tam");
 		
@@ -25,6 +25,19 @@ public class LoginController {
 		
 		return "login";
 	}
+	
+	@RequestMapping("getinfo")
+	public String getfromlogininfo (String name,String password ) {
+		
+		System.out.println(name);
+		System.out.println(password);
+		
+		return "login";
+		
+	}
+	
+	
+
 
 	
 
