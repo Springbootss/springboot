@@ -21,14 +21,11 @@ public class LoginController {
 		model.addAttribute("name", "tam");
 		
 		
-
 		
-
 		
 		return "login";
 	}
-	
-	
+
 	
 
 }
