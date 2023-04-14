@@ -1,3 +1,5 @@
-# springboot
-# springboot
-# springboot
+# プロジェクト生成
+
+# コントローラーからVIEWに値を渡す
+# VIEWからコントローラーに値を渡す
+＃
