@@ -8,8 +8,32 @@
     <h2>会員情報<h2>
 
 <hr>
-ようこそ<span th:text="${id}">
-</span>様<br>
+ようこそ
+<span th:text="${member.name}">様</span>
+
+<table border="1">
+    <tr th:each="members:${memberlist}" >
+        <td><span th:text="${members.id}"></span></td>
+        <td><span th:text="${members.name}"></span></td>
+
+
+
+
+
+
+    </tr>        
+</table>
+
+
+
+
+
+
+
+
+
+
+様<br>
 
 <a href="modify">会員情報変更</a>　<a href="logout">logout</a>
 
