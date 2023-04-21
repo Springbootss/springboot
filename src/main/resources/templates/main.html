@@ -8,8 +8,7 @@
     <h2>会員情報<h2>
 
 <hr>
-ようこそ
-<span th:text="${member.name}">様</span>
+ようこそ<span th:text="${member.name}">様</span> <br>
 
 <table border="1">
     <tr th:each="members:${memberlist}" >
@@ -35,7 +34,14 @@
 
 様<br>
 
-<a href="modify">会員情報変更</a>　<a href="logout">logout</a>
+<!-- @PathVariable  -->
+
+<!-- <a th:href="@{modify/{id}(id=${member.id})}">会員情報変更</a> -->
+
+<a th:href="@{modify/{id}(id=${member.id})}">会員情報変更</a>
+
+<a href="logout">logout</a>
+
 
 
 
