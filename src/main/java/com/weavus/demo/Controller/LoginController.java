@@ -31,22 +31,31 @@ public class LoginController {
 		
 		//select * from Member Where id=id
 		Member result=repo.findByIdAndPw(id,password);
-		Iterable <Member> resultlist=repo.findAll();
+		if (result!=null) {
+			
+			Iterable <Member> resultlist=repo.findAll();
+			model.addAttribute("member", result);
+			model.addAttribute("memberlist", resultlist);
+			return "main";
+			
+		}
+		else {
+			model.addAttribute("msg", "IDまたはパスワード一致しません。");
+			return "login";
+		}
 		
+	}
+
+			
+	
+
 		
-		model.addAttribute("member", result);
-		model.addAttribute("memberlist", resultlist);
-		
-		
-		
-		return "main";
 		
 		
 //		if (id==123&&password.equals("123"))
 //			return "main";
 //		else
 //			return "login";
-	}
 
 	
 	

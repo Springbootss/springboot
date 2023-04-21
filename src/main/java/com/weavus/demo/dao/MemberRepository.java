@@ -12,4 +12,5 @@ public interface MemberRepository extends CrudRepository<Member,Integer> {
 	@Query("select M from Member M WHERE M.id=:id AND M.password=:password")
 	Member findByIdAndPw(@Param ("id") int id,@Param ("password") String password);
 
+
 }
